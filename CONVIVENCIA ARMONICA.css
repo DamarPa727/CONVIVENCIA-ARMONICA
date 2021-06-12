@@ -1,0 +1,514 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CONVIVENCIA ARMONICA</title>
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #4E5869;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	background-image: url(imagenes/fondo1.jpg);
+}
+
+/* ~~ Selectores de elemento/etiqueta ~~ */
+ul, ol, dl { /* Debido a las diferencias existentes entre los navegadores, es recomendable no añadir relleno ni márgenes en las listas. Para lograr coherencia, puede especificar las cantidades deseadas aquí o en los elementos de lista (LI, DT, DD) que contienen. Recuerde que lo que haga aquí se aplicará en cascada en la lista .nav, a no ser que escriba un selector más específico. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* la eliminación del margen superior resuelve un problema que origina que los márgenes escapen de la etiqueta div contenedora. El margen inferior restante lo mantendrá separado de los elementos de que le sigan. */
+	padding-right: 15px;
+	padding-left: 15px; /* la adición de relleno a los lados del elemento dentro de las divs, en lugar de en las divs propiamente dichas, elimina todas las matemáticas de modelo de cuadro. Una div anidada con relleno lateral también puede usarse como método alternativo. */
+	font-family: "Times New Roman", Times, serif;
+	font-size: x-large;
+	text-align: justify;
+	color: #00F;
+	font-weight: bold;
+}
+a img { /* este selector elimina el borde azul predeterminado que se muestra en algunos navegadores alrededor de una imagen cuando está rodeada por un vínculo */
+	border: none;
+}
+
+/* ~~ La aplicación de estilo a los vínculos del sitio debe permanecer en este orden (incluido el grupo de selectores que crea el efecto hover -paso por encima-). ~~ */
+a:link {
+	color:#414958;
+	text-decoration: underline; /* a no ser que aplique estilos a los vínculos para que tengan un aspecto muy exclusivo, es recomendable proporcionar subrayados para facilitar una identificación visual rápida */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* este grupo de selectores proporcionará a un usuario que navegue mediante el teclado la misma experiencia de hover (paso por encima) que experimenta un usuario que emplea un ratón. */
+	text-decoration: none;
+}
+
+/* ~~ este contenedor rodea a todas las demás divs, lo que les asigna su anchura basada en porcentaje ~~ */
+.container {
+	width: 90%;
+	max-width: 1260px;/* puede que sea conveniente una anchura máxima (max-width) para evitar que este diseño sea demasiado ancho en un monitor grande. Esto mantiene una longitud de línea más legible. IE6 no respeta esta declaración. */
+	min-width: 780px;/* puede que sea conveniente una anchura mínima (min-width) para evitar que este diseño sea demasiado estrecho. Esto permite que la longitud de línea sea más legible en las columnas laterales. IE6 no respeta esta declaración. */
+	background-color: #FFF; /* el valor automático de los lados, unido a la anchura, centra el diseño. No es necesario si establece la anchura de .container en el 100%. */
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+
+/* ~~no se asigna una anchura al encabezado. Se extenderá por toda la anchura del diseño. Contiene un marcador de posición de imagen que debe sustituirse por su propio logotipo vinculado~~ */
+.header {
+	background-color: #FF9933;
+	height: 290px;
+}
+
+/* ~~ Esta es la información de diseño. ~~ 
+
+1) El relleno sólo se sitúa en la parte superior y/o inferior de la div. Los elementos situados dentro de esta div tienen relleno a los lados. Esto le ahorra las "matemáticas de modelo de cuadro". Recuerde que si añade relleno o borde lateral a la div propiamente dicha, éste se añadirá a la anchura que defina para crear la anchura *total*. También puede optar por eliminar el relleno del elemento en la div y colocar una segunda div dentro de ésta sin anchura y el relleno necesario para el diseño deseado.
+
+*/
+.content {
+	height: 4000px;
+	padding-top: 10px;
+	padding-right: 0;
+	padding-bottom: 10px;
+	padding-left: 0;
+	background-color: #FF6;
+}
+
+/* ~~ Este selector agrupado da espacio a las listas del área de .content ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* este relleno reproduce en espejo el relleno derecho de la regla de encabezados y de párrafo incluida más arriba. El relleno se ha colocado en la parte inferior para que el espacio existente entre otros elementos de la lista y a la izquierda cree la sangría. Estos pueden ajustarse como se desee. */
+}
+
+/* ~~ El pie de página ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #FF9933;
+	font-weight: bold;
+	text-align: center;
+}
+
+/* ~~ clases float/clear varias ~~ */
+.fltrt {  /* esta clase puede utilizarse para que un elemento flote en la parte derecha de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* esta clase puede utilizarse para que un elemento flote en la parte izquierda de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* esta clase puede situarse en una <br /> o div vacía como elemento final tras la última div flotante (dentro de #container) si #footer se elimina o se saca fuera de #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+#apDiv1 {
+	position: absolute;
+	width: 769px;
+	height: 213px;
+	z-index: 1;
+	left: 488px;
+	top: 1px;
+}
+#apDiv2 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 2;
+	left: 96px;
+	top: 42px;
+}
+#apDiv3 {
+	position: absolute;
+	width: 786px;
+	height: 115px;
+	z-index: 3;
+	left: 257px;
+	top: 491px;
+}
+#apDiv4 {
+	position: absolute;
+	width: 591px;
+	height: 1203px;
+	z-index: 4;
+	left: 8px;
+	top: -72px;
+}
+#apDiv5 {
+	position: absolute;
+	width: 484px;
+	height: 295px;
+	z-index: 5;
+	left: 123px;
+	top: 1069px;
+	border: 3px solid #FFF;
+	background-color: #FF6;
+}
+.container #apDiv5 strong {
+	text-align: justify;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: x-large;
+}
+#apDiv6 {
+	position: absolute;
+	width: 484px;
+	height: 295px;
+	z-index: 5;
+	left: 277px;
+	top: 1121px;
+	border: 3px solid #FFF;
+	background-color: #FF6;
+}
+#apDiv7 {
+	position: absolute;
+	width: 1126px;
+	height: 386px;
+	z-index: 4;
+	left: 104px;
+	top: 625px;
+}
+.container .footer p {
+	text-align: center;
+	color: #000;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+.content #apDiv17 p {
+	font-family: "Times New Roman", Times, serif;
+}
+.content #apDiv21 h3 strong {
+	font-family: "Times New Roman", Times, serif;
+}
+-->
+</style>
+<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+#apDiv8 {
+	position: absolute;
+	width: 1104px;
+	height: 115px;
+	z-index: 5;
+	left: 118px;
+	top: 1052px;
+}
+#apDiv9 {
+	position: absolute;
+	width: 535px;
+	height: 973px;
+	z-index: 6;
+	left: 109px;
+	top: 1206px;
+	font-family: Verdana, Geneva, sans-serif;
+}
+#apDiv10 {
+	position: absolute;
+	width: 1139px;
+	height: 115px;
+	z-index: 7;
+	left: 99px;
+	top: 2419px;
+}
+#apDiv11 {
+	position: absolute;
+	width: 1153px;
+	height: 892px;
+	z-index: 8;
+	left: 312px;
+	top: 2498px;
+	font-family: "Times New Roman", Times, serif;
+}
+#apDiv12 {
+	position: absolute;
+	width: 851px;
+	height: 115px;
+	z-index: 9;
+	left: 34px;
+	top: 1336px;
+}
+#apDiv13 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 9;
+}
+#apDiv14 {
+	position: absolute;
+	width: 1106px;
+	height: 115px;
+	z-index: 9;
+	left: 2px;
+	top: 1200px;
+}
+.container .content #apDiv11 h3 strong {
+	font-size: x-large;
+}
+#apDiv15 {
+	position: absolute;
+	width: 291px;
+	height: 218px;
+	z-index: 9;
+	left: 595px;
+	top: -1249px;
+}
+#apDiv16 {
+	position: absolute;
+	width: 358px;
+	height: 245px;
+	z-index: 9;
+	left: 914px;
+	top: 1512px;
+}
+#apDiv17 {
+	position: absolute;
+	width: 568px;
+	height: 1188px;
+	z-index: 10;
+	left: 80px;
+	top: 1209px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+.content #apDiv17 p {
+	font-weight: normal;
+}
+.container .content #apDiv17 {
+	font-weight: bold;
+}
+#apDiv18 {
+	position: absolute;
+	width: 331px;
+	height: 256px;
+	z-index: 11;
+	left: 672px;
+	top: 1787px;
+}
+#apDiv19 {
+	position: absolute;
+	width: 327px;
+	height: 223px;
+	z-index: 12;
+	left: 923px;
+	top: 2118px;
+}
+#apDiv20 {
+	position: absolute;
+	width: 587px;
+	height: 1420px;
+	z-index: 13;
+	left: 80px;
+	top: 2583px;
+	font-family: "Times New Roman", Times, serif;
+}
+.content #apDiv20 p {
+	font-family: "Times New Roman", Times, serif;
+}
+#apDiv21 {
+	position: absolute;
+	width: 573px;
+	height: 1683px;
+	z-index: 13;
+	left: 85px;
+	top: 2581px;
+}
+#apDiv22 {
+	position: absolute;
+	width: 572px;
+	height: 115px;
+	z-index: 13;
+	left: 2px;
+	top: 1416px;
+	font-weight: normal;
+}
+#apDiv23 {	position: absolute;
+	width: 568px;
+	height: 798px;
+	z-index: 10;
+	left: 80px;
+	top: 1209px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+#apDiv24 {
+	position: absolute;
+	width: 358px;
+	height: 266px;
+	z-index: 13;
+	left: 696px;
+	top: 2629px;
+}
+#apDiv25 {
+	position: absolute;
+	width: 329px;
+	height: 268px;
+	z-index: 14;
+	left: 920px;
+	top: 2964px;
+}
+#apDiv26 {
+	position: absolute;
+	width: 384px;
+	height: 240px;
+	z-index: 15;
+	left: 707px;
+	top: 3300px;
+}
+#apDiv27 {
+	position: absolute;
+	width: 326px;
+	height: 208px;
+	z-index: 16;
+	left: 675px;
+	top: 1268px;
+}
+#apDiv28 {
+	position: absolute;
+	width: 989px;
+	height: 129px;
+	z-index: 17;
+	left: 103px;
+	top: 3668px;
+}
+#apDiv29 {
+	position: absolute;
+	width: 1249px;
+	height: 115px;
+	z-index: 18;
+	left: 94px;
+	top: 1067px;
+}
+#apDiv30 {
+	position: absolute;
+	width: 1034px;
+	height: 335px;
+	z-index: 19;
+	left: 224px;
+	top: 3783px;
+}
+#apDiv31 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 20;
+	left: 142px;
+	top: 4338px;
+}
+#apDiv32 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 21;
+	left: 981px;
+	top: 4340px;
+}
+</style>
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="header">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div id="apDiv2"><img src="imagenes/logo.jpeg" width="381" height="185" /></div>
+    <div id="apDiv1">
+      <p>&nbsp;<a href="https://fontmeme.com/es/fuentes-de-grafiti/"><img src="https://fontmeme.com/permalink/210519/e7781dd321d36ea4859c31e5b344c88d.png" alt="fuentes-de-grafiti" width="755" height="191" border="0" /></a></p>
+    </div>
+  <!-- end .header --></div>
+  <div class="content">
+    <h1><header>
+<nav class="container-nav">
+<ul id="MenuPrincipal" class="MenuBarHorizontal">
+  <li><a href="SOBRE NOSOTROS.html">SOBRE NOSOTROS </a>    </li>
+  <li><a href="CONVIVENCIA ARMONICA.html"> CONVIVENCIA ARM&Oacute;NICA</a></li>
+  <li><a class="MenuBarItemSubmenu" href="#">JUEGOS INTERACTIVOS</a>
+    <ul>
+      <li><a href="EMPRENDIMIENTO.html">EMPRENDIMIENTO</a></li>
+      <li><a href="#">LENGUAJE</a></li>
+      <li><a href="MATEMATICAS.html">MATEMATICAS</a></li>
+      <li><a href="#">INGLES</a></li>
+      <li><a href="#">HISTORIA</a></li>
+      <li><a href="#">BIOLOGIA</a></li>
+      <li><a href="#">FISICA</a></li>
+      <li><a href="#">EDUCACION FISICA</a></li>
+      <li><a href="#">QUIMICA</a></li>
+</ul>
+  </li>
+  <li><a href="CONTACTANOS.html">CONTACTANOS</a></li>
+  <p>&nbsp;</p>
+</ul>
+<ul>
+  
+        <h3>&nbsp;</h3>
+        <p>&nbsp; </p>
+                    <div id="apDiv3"><a href="https://fontmeme.com/es/fuentes-de-grafiti/"><img src="https://fontmeme.com/permalink/210526/7876e91e7e8a08cf7268977c84a11905.png" alt="fuentes-de-grafiti" width="775" height="116" border="0" /></a></div>
+        <div id="apDiv7"><a href="https://fontmeme.com/es/fuentes-de-grafiti/">
+          <embed src="videos/video1.mp4" width="1095" height="384"></embed>
+        </a></div>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <div id="apDiv29"><a href="https://fontmeme.com/es/fuentes-de-grafiti/"><img src="https://fontmeme.com/permalink/210604/36c5d3a300621403acfb039001f27ffe.png" alt="fuentes-de-grafiti" width="1162" height="111" border="0"></a></div>
+        <p>&nbsp;</p>
+  </ul>
+    </nav>
+<p>&nbsp;       </p>
+  <!-- end .content -->
+  <div id="apDiv10"><a href="https://fontmeme.com/es/fuentes-de-grafiti/"><img src="https://fontmeme.com/permalink/210602/479af1ff945633188fbd9f4a7860cde4.png" alt="fuentes-de-grafiti" width="1149" height="114" border="0"></a></div>
+  <div id="apDiv16"><img src="imagenes/gif2.gif" width="334" height="242" /></div>
+  <div id="apDiv17">
+    <p>Para lograr una buena convivencia se debe poner en práctica algunos valores como son:</p>
+    <p>- <strong>El respeto</strong>: Cuando establecemos cualquier tipo de comunicación con otra persona, la primera premisa es aceptar la dignidad de esta persona como tal, sin prejuicios ni discriminaciones, y entender que puedan tener pensamientos y opiniones distintos a los nuestros. Esto no implica que no podamos discutir o combatir estas opiniones, pero siempre respetando a la persona.<br />
+      <br />
+      - <strong>La afabilidad</strong>: Entendiendo ésta como una actitud positiva en nuestra relación con los demás. Un ambiente de cordialidad facilitará nuestras relaciones con los demás pero si nuestra actitud es recelosa o indiferente, difícilmente nos llevará a una convivencia satisfactoria.<br />
+  <br />
+      - <strong>La inteligencia</strong>: En las relaciones sociales, las buenas intenciones no son siempre suficientes. Cuantas veces hemos visto a personas que tienen el dudoso don de la <strong>impertinencia</strong> y molestan continuamente sin ser conscientes de ello. Para tratar con inteligencia a los demás, es importante saber escuchar e intentar conocer a la otra persona y, en caso contrario, saber callar en determinados momentos. Una persona socialmente inteligente sabe estar y comportarse con personas muy diversas, social y culturalmente, aunque haya tenido quizá menos formación en la infancia. <br />
+  <br />
+      - <strong>La educación</strong>: Es una de las bases de una buena convivencia, y la podemos considerar como un compendio de los puntos anteriores.</p>
+    <div id="apDiv22">
+      <div id="apDiv4">
+        <p>1) Comunicarse de forma adecuada. En las familias en las que no hay comunicación surgen muchos conflictos. La poca claridad, poca escucha, falta de atención, producen que la persona se sienta poco incluida en la familia. Si, por el contrario, conseguimos una buena comunicación basada en la empatía, los miembros de la familia se sentirán más cómodos para expresar lo que sienten y lo que no les gusta, tratando de buscar consenso, comprensión y apoyo.</p>
+        <p>2)  Expresar las emociones. Si somos capaces de expresar en nuestra familia los sentimientos que van surgiendo, hay más posibilidades de que el otro nos entienda y apoye cuando lo necesitamos. Lo importante es crear un ambiente de confianza, sin mentir u ocultar, para facilitar y preservar los vínculos. </p>
+        <p>3) No juzgar o etiquetar. Cada persona tiene sus circunstancias y sus motivos por los cuales hacer las cosas, por lo que mejor no juzgar y tratar de entender las razones que le han llevado a hacer o actuar de determinada manera. </p>
+        <p>4) Evitar las comparaciones.Todos somos diferentes, con lo bueno o con lo malo, todos tenemos distintas cosas que se nos dan mejor o peor. Por lo que las comparaciones solo tienden a generar inseguridad o malestar. </p>
+        <p>5)Usar el sentido del humor.El humor y las bromas promueven un clima positivo, donde predomina la comodidad y la tranquilidad.      </p>
+      </div>
+    </div>
+  </div>
+  <div id="apDiv18"><img src="imagenes/imagen2.jpg" width="327" height="255" /></div>
+  <div id="apDiv19"><img src="imagenes/ima2.jpg" width="327" height="224" /></div>
+  <div id="apDiv24"><img src="imagenes/gif1.gif" width="361" height="264" /></div>
+  <div id="apDiv26"><img src="imagenes/imagen5.jpg" width="384" height="240" /></div>
+  <div id="apDiv27"><img src="imagenes/imagen3.jpg" width="323" height="205" /></div>
+  <div id="apDiv30"><iframe width="780" height="405" src="https://www.youtube.com/embed/fYj0WU_xbC0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+  </div>
+  <div class="footer">
+    <p><font color="red">UNIDAD EDUCATIVA MUNICIPAL TÉCNICA Y EN CIENCIAS</font></p>
+    <div id="apDiv25"><img src="imagenes/ima1.jpg" width="321" height="265" /></div>
+    <div id="apDiv28"><a href="https://fontmeme.com/es/fuentes-de-grafiti/"><img src="https://fontmeme.com/permalink/210604/e69cf92af4e6f019d791a94e8e4d807c.png" alt="fuentes-de-grafiti" width="1148" height="72" border="0"></a></div>
+    <p><font color="red">&quot;SAN FRANCISCO DE QUITO&quot;</font> </p>
+    <p><font color="red">ESPECIALIDAD INFORMÁTICA</font> </p>
+    <p><font color="blue">TERCERO DE BACHILLERATO &quot;D&quot;</font></p>
+    <div id="apDiv32"><img src="imagenes/sello-colegio.png" alt="" width="142" height="142" /></div>
+    <p><font color ="blue"> ©2021 WILINTONG OÑA</font></p>
+    <p><font color ="blue">© 2021 DAMAR CHANGOLUISA</font></p>
+    <div id="apDiv31"><img src="imagenes/sello-colegio.png" alt="" width="142" height="142" /></div>
+
+  <!-- end .footer --></div>
+<!-- end .container --></div>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuPrincipal", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+</body>
+</html>

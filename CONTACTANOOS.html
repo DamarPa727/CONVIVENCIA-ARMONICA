@@ -1,0 +1,650 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>BIOLOGÍA</title>
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #4E5869;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	background-image: url(imagenes/fondo1.jpg);
+}
+
+/* ~~ Selectores de elemento/etiqueta ~~ */
+ul, ol, dl { /* Debido a las diferencias existentes entre los navegadores, es recomendable no añadir relleno ni márgenes en las listas. Para lograr coherencia, puede especificar las cantidades deseadas aquí o en los elementos de lista (LI, DT, DD) que contienen. Recuerde que lo que haga aquí se aplicará en cascada en la lista .nav, a no ser que escriba un selector más específico. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* la eliminación del margen superior resuelve un problema que origina que los márgenes escapen de la etiqueta div contenedora. El margen inferior restante lo mantendrá separado de los elementos de que le sigan. */
+	padding-right: 15px;
+	padding-left: 15px; /* la adición de relleno a los lados del elemento dentro de las divs, en lugar de en las divs propiamente dichas, elimina todas las matemáticas de modelo de cuadro. Una div anidada con relleno lateral también puede usarse como método alternativo. */
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+}
+a img { /* este selector elimina el borde azul predeterminado que se muestra en algunos navegadores alrededor de una imagen cuando está rodeada por un vínculo */
+}
+
+/* ~~ La aplicación de estilo a los vínculos del sitio debe permanecer en este orden (incluido el grupo de selectores que crea el efecto hover -paso por encima-). ~~ */
+a:link {
+	color:#414958;
+	text-decoration: underline; /* a no ser que aplique estilos a los vínculos para que tengan un aspecto muy exclusivo, es recomendable proporcionar subrayados para facilitar una identificación visual rápida */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* este grupo de selectores proporcionará a un usuario que navegue mediante el teclado la misma experiencia de hover (paso por encima) que experimenta un usuario que emplea un ratón. */
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/* ~~ este contenedor rodea a todas las demás divs, lo que les asigna su anchura basada en porcentaje ~~ */
+.container {
+	width: 90%;
+	max-width: 1260px;/* puede que sea conveniente una anchura máxima (max-width) para evitar que este diseño sea demasiado ancho en un monitor grande. Esto mantiene una longitud de línea más legible. IE6 no respeta esta declaración. */
+	min-width: 780px;/* puede que sea conveniente una anchura mínima (min-width) para evitar que este diseño sea demasiado estrecho. Esto permite que la longitud de línea sea más legible en las columnas laterales. IE6 no respeta esta declaración. */
+	background-color: #FFF; /* el valor automático de los lados, unido a la anchura, centra el diseño. No es necesario si establece la anchura de .container en el 100%. */
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+
+/* ~~no se asigna una anchura al encabezado. Se extenderá por toda la anchura del diseño. Contiene un marcador de posición de imagen que debe sustituirse por su propio logotipo vinculado~~ */
+.header {
+	background-color: #FF9933;
+	height: 290px;
+}
+
+/* ~~ Esta es la información de diseño. ~~ 
+
+1) El relleno sólo se sitúa en la parte superior y/o inferior de la div. Los elementos situados dentro de esta div tienen relleno a los lados. Esto le ahorra las "matemáticas de modelo de cuadro". Recuerde que si añade relleno o borde lateral a la div propiamente dicha, éste se añadirá a la anchura que defina para crear la anchura *total*. También puede optar por eliminar el relleno del elemento en la div y colocar una segunda div dentro de ésta sin anchura y el relleno necesario para el diseño deseado.
+
+*/
+.content {
+	background-color: #FF6;
+	height: 1700px;
+	padding-top: 10px;
+	padding-right: 0;
+	padding-bottom: 10px;
+	padding-left: 0;
+}
+
+/* ~~ Este selector agrupado da espacio a las listas del área de .content ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* este relleno reproduce en espejo el relleno derecho de la regla de encabezados y de párrafo incluida más arriba. El relleno se ha colocado en la parte inferior para que el espacio existente entre otros elementos de la lista y a la izquierda cree la sangría. Estos pueden ajustarse como se desee. */
+}
+
+/* ~~ El pie de página ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #FF9933;
+}
+
+/* ~~ clases float/clear varias ~~ */
+.fltrt {  /* esta clase puede utilizarse para que un elemento flote en la parte derecha de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* esta clase puede utilizarse para que un elemento flote en la parte izquierda de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* esta clase puede situarse en una <br /> o div vacía como elemento final tras la última div flotante (dentro de #container) si #footer se elimina o se saca fuera de #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+#apDiv1 {
+	position: absolute;
+	width: 669px;
+	height: 233px;
+	z-index: 1;
+	left: 493px;
+	top: 20px;
+}
+#apDiv2 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 2;
+	left: 100px;
+	top: 35px;
+}
+.container .content #apDiv19 p b {
+	font-size: 21px;
+	text-align: left;
+}
+.content #apDiv19 p b {
+	text-align: justify;
+}
+.content #apDiv19 p b {
+	font-size: 25px;
+	text-align: justify;
+}
+.content #apDiv19 p b {
+	text-align: justify;
+}
+.container .content #apDiv13 {
+	text-decoration: none;
+}
+.content #apDiv13 p {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 21px;
+	text-decoration: none;
+	text-align: justify;
+	font-weight: normal;
+}
+-->
+</style>
+<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+#apDiv3 {
+	position: absolute;
+	width: 168px;
+	height: 181px;
+	z-index: 3;
+	left: 1032px;
+	top: 2021px;
+}
+#apDiv4 {
+	position: absolute;
+	width: 498px;
+	height: 136px;
+	z-index: 5;
+	left: 686px;
+	top: 895px;
+	border: 3px solid #FFF;
+	background-color: #36F;
+	font-size: x-large;
+	color: #00F;
+	font-weight: bold;
+}
+#apDiv5 {
+	position: absolute;
+	width: 168px;
+	height: 181px;
+	z-index: 3;
+	left: 159px;
+	top: 2027px;
+}
+#apDiv7 {
+	position: absolute;
+	width: 411px;
+	height: 69px;
+	z-index: 6;
+	left: 161px;
+	top: 503px;
+	text-align: center;
+	font-size: x-large;
+	color: #F00;
+	font-weight: bold;
+}
+#apDiv8 {
+	position: absolute;
+	width: 523px;
+	height: 142px;
+	z-index: 9;
+	left: 118px;
+	top: 890px;
+	font-size: x-large;
+	background-color: #36F;
+	border: 3px solid #FFF;
+	color: #00F;
+	font-weight: bold;
+}
+#apDiv9 {
+	position: absolute;
+	width: 495px;
+	height: 132px;
+	z-index: 3;
+	left: 684px;
+	top: 565px;
+	font-size: x-large;
+	background-color: #3C3;
+	border: 3px solid #FFF;
+	font-weight: bold;
+	color: #00F;
+}
+#apDiv10 {
+	position: absolute;
+	width: 492px;
+	height: 139px;
+	z-index: 4;
+	left: 687px;
+	top: 729px;
+	font-size: x-large;
+	background-color: #C36;
+	border: 3px solid #FFF;
+	text-align: left;
+	font-weight: bold;
+	color: #00F;
+}
+#apDiv11 {
+	position: absolute;
+	width: 519px;
+	height: 134px;
+	z-index: 7;
+	font-size: x-large;
+	left: 118px;
+	top: 562px;
+	color: #00F;
+	background-color: #3C3;
+	border: 3px solid #FFF;
+	font-weight: bold;
+}
+#apDiv19 {
+	position: absolute;
+	width: 1036px;
+	height: 168px;
+	z-index: 12;
+	left: 153px;
+	top: 713px;
+	font-family: "Times New Roman", Times, serif;
+	background-color: #FF0;
+	border: 2px solid #000;
+	font-size: 20px;
+	text-align: justify;
+}
+#apDiv12 {
+	position: absolute;
+	width: 520px;
+	height: 137px;
+	z-index: 8;
+	left: 117px;
+	top: 725px;
+	font-size: x-large;
+	background-color: #C36;
+	border: 3px solid #FFF;
+#apDiv13 {
+	position: absolute;
+	width: 1154px;
+	height: 264px;
+	z-index: 13;
+	left: 107px;
+	top: 744px;
+	font-weight: bold;
+	font-weight: bold;
+	font-weight: bold;
+}
+.container .content #apDiv13 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 21px;
+	text-align: justify;
+}
+#apDiv14 {
+	position: absolute;
+	width: 456px;
+	height: 68px;
+	z-index: 13;
+	left: 432px;
+	top: 1498px;
+	text-align: center;
+	color: #F00;
+	font-size: x-large;
+	font-weight: bold;
+}
+}
+#apDiv15 {
+	position: absolute;
+	width: 507px;
+	height: 200px;
+	z-index: 5;
+	font-size: large;
+	left: 686px;
+	top: 1248px;
+	color: #00F;
+	background-color: #CCC;
+	border: 3px solid #FFF;
+	text-align: justify;
+	font-weight: bold;
+}
+#apDiv16 {	position: absolute;
+	width: 411px;
+	height: 69px;
+	z-index: 6;
+	left: 158px;
+	top: 601px;
+	text-align: center;
+	font-size: x-large;
+	color: #F00;
+}
+.container .content ul #apDiv12 {
+	color: #00F;
+	font-weight: bold;
+}
+#apDiv17 {	position: absolute;
+	width: 498px;
+	height: 136px;
+	z-index: 5;
+	left: 692px;
+	top: 1004px;
+	border: 3px solid #FFF;
+	background-color: #36F;
+	font-size: x-large;
+}
+#apDiv18 {	position: absolute;
+	width: 498px;
+	height: 136px;
+	z-index: 5;
+	left: 692px;
+	top: 1004px;
+	border: 3px solid #FFF;
+	background-color: #36F;
+	font-size: x-large;
+}
+.container .content ul #apDiv14 a {
+	font-weight: bold;
+}
+#apDiv21 {
+	position: absolute;
+	width: 519px;
+	height: 204px;
+	z-index: 11;
+	left: 118px;
+	top: 1245px;
+	font-size: large;
+	text-align: justify;
+	background-color: #CCC;
+	border: 3px solid #FFF;
+	font-weight: bold;
+	color: #00F;
+}
+#apDiv20 {	position: absolute;
+	width: 495px;
+	height: 140px;
+	z-index: 3;
+	left: 698px;
+	top: 673px;
+	font-size: x-large;
+	background-color: #3C3;
+	border: 3px solid #FFF;
+}
+#apDiv22 {	position: absolute;
+	width: 500px;
+	height: 139px;
+	z-index: 4;
+	left: 696px;
+	top: 833px;
+	font-size: x-large;
+	background-color: #C36;
+	border: 3px solid #FFF;
+	text-align: left;
+}
+#apDiv6 {
+	position: absolute;
+	width: 499px;
+	height: 150px;
+	z-index: 5;
+	left: 687px;
+	top: 1060px;
+	border: 3px solid #FFF;
+	background-color: #FFF;
+	font-size: x-large;
+}
+#apDiv23 {	position: absolute;
+	width: 507px;
+	height: 200px;
+	z-index: 5;
+	font-size: large;
+	left: 689px;
+	top: 1376px;
+	color: #00F;
+	background-color: #CCC;
+	border: 3px solid #FFF;
+	text-align: justify;
+}
+#apDiv24 {
+	position: absolute;
+	width: 411px;
+	height: 69px;
+	z-index: 6;
+	left: 731px;
+	top: 500px;
+	text-align: center;
+	font-size: x-large;
+	color: #F00;
+	font-weight: bold;
+}
+#apDiv25 {
+	position: absolute;
+	width: 499px;
+	height: 150px;
+	z-index: 5;
+	left: 395px;
+	top: 416px;
+	font-size: x-large;
+}
+#apDiv26 {
+	position: absolute;
+	width: 514px;
+	height: 150px;
+	z-index: 5;
+	left: 122px;
+	top: 1063px;
+	border: 3px solid #FFF;
+	background-color: #FFF;
+	font-size: x-large;
+}
+#apDiv27 {	position: absolute;
+	width: 456px;
+	height: 68px;
+	z-index: 13;
+	left: 505px;
+	top: 1706px;
+	text-align: center;
+	color: #F00;
+	font-size: x-large;
+}
+#apDiv28 {
+	position: absolute;
+	width: 1187px;
+	height: 55px;
+	z-index: 14;
+	left: 65px;
+	top: 1594px;
+	color: #000;
+	font-size: 20px;
+}
+#apDiv29 {	position: absolute;
+	width: 456px;
+	height: 68px;
+	z-index: 13;
+	left: 505px;
+	top: 1706px;
+	text-align: center;
+	color: #F00;
+	font-size: x-large;
+}
+#apDiv30 {
+	position: absolute;
+	width: 1006px;
+	height: 346px;
+	z-index: 15;
+	left: 79px;
+	top: 1688px;
+	font-size: 21px;
+	color: #00F;
+	font-weight: bold;
+}
+#apDiv31 {	position: absolute;
+	width: 456px;
+	height: 68px;
+	z-index: 13;
+	left: 505px;
+	top: 1706px;
+	text-align: center;
+	color: #F00;
+	font-size: x-large;
+}
+#apDiv32 {
+	position: absolute;
+	width: 456px;
+	height: 68px;
+	z-index: 13;
+	left: 421px;
+	top: 1519px;
+	text-align: center;
+	color: #F00;
+	font-size: x-large;
+	font-weight: bold;
+}
+</style>
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="header">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div id="apDiv2"><img src="imagenes/logo.jpeg" width="381" height="185" /></div>
+    <div id="apDiv1">
+      <p>&nbsp;<a href="https://fontmeme.com/es/fuentes-de-grafiti/"><img src="https://fontmeme.com/permalink/210519/e7781dd321d36ea4859c31e5b344c88d.png" alt="fuentes-de-grafiti" width="751" height="191" border="0" /></a></p>
+    </div>
+  <!-- end .header --></div>
+  <div class="content">
+    <h1><header>
+<nav class="container-nav"> </nav>
+<ul id="MenuPrincipal" class="MenuBarHorizontal">
+  <li><a href="SOBRE NOSOTROS.html">SOBRE NOSOTROS </a></li>
+  <li><a href="CONVIVENCIA ARMONICA.html"> CONVIVENCIA ARM&Oacute;NICA</a></li>
+  <li><a class="MenuBarItemSubmenu" href="#">JUEGOS INTERACTIVOS</a>
+    <ul>
+      <li><a href="EMPRENDIMIENTO.html">EMPRENDIMIENTO</a></li>
+      <li><a href="LENGUA Y LITERATURA.html">LENGUA Y LITERATURA</a></li>
+      <li><a href="MATEMATICAS.html">MATEM&Aacute;TICAS</a></li>
+      <li><a href="INGLES.html">INGL&Eacute;S</a></li>
+      <li><a href="HISTORIA.html">HISTORIA</a></li>
+      <li><a href="BIOLOGIA.html">BIOLOG&Iacute;A</a></li>
+      <li><a href="FISICA.html">F&Iacute;SICA</a></li>
+      <li><a href="EDUCACIÓN FISICA.html">EDUCACI&Oacute;N FISICA</a></li>
+</ul>
+  </li>
+  <li><a href="CONTACTANOS.html">CONTACTANOS</a></li>
+  <p>&nbsp;</p>
+</ul>
+<p>&nbsp;</p>
+  <p><!-- end .content --></p>
+  <p>&nbsp;</p>
+  <div id="apDiv6" style="font-weight: bold"><img src="imagenes/Gmail.png" alt="" width="128" height="110" /><a href="mailto:onasantiago7@gmail.com">onasantiago7@gmail.com</a></div>
+  <ul>
+    <div id="apDiv7">DAMAR CHANGOLUISA</div>
+  </ul>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <ul>
+    <div id="apDiv10"><img src="imagenes/Instagram.png" alt="" width="141" height="122" />wilintong13_e</div>
+  </ul>
+  <p>&nbsp;</p>
+  <ul>
+    <div id="apDiv12"><img src="imagenes/Instagram.png" alt="" width="141" height="122" /> damar.30492</div>
+  </ul>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <ul>
+    <div id="apDiv4"><img src="imagenes/Facebook.png" alt="" width="144" height="122" /> Wilintong Oña</div>
+  </ul>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <div id="apDiv26"><span style="font-weight: bold"><img src="imagenes/Gmail.png" alt="" width="128" height="110" /></span><a href="mailto:patriciadamar14@gmail.com">patriciadamar14@gmail.com</a></div>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <ul>
+    <div id="apDiv11"><img src="imagenes/WhatsApp.png" alt="" width="143" height="123" /> 0990599732</div>
+  </ul>
+  <p>&nbsp;</p>
+  <ul>
+    <div id="apDiv8"><img src="imagenes/Facebook.png" alt="" width="144" height="122" /> Wilintong Oña</div>
+  </ul>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <div id="apDiv21"><img src="imagenes/Direccion.jpg" alt="" width="138" height="139" />  Av. Libertador Simón Bolívar-Barrio San Luis-Quito-Ecuador</div>
+  <ul>
+    <div id="apDiv13"></div>
+  </ul>
+  <p>&nbsp;</p>
+  <div id="apDiv15"><img src="imagenes/Direccion.jpg" alt="" width="138" height="139" />   Barrio Santa Rosa de San Ignacio Guayllabamba-Quito-Ecuador</div>
+  <div id="apDiv24">WILINTONG OÑA</div>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <ul>
+    <div id="apDiv9"><img src="imagenes/WhatsApp.png" alt="" width="143" height="123" /> 0999785599</div>
+    <div id="apDiv32">FORMULARIO</div>
+  </ul>
+  <ul>
+    <div id="apDiv25"><a href="https://fontmeme.com/es/fuentes-de-grafiti/"><img src="https://fontmeme.com/permalink/210528/0cfcfdb26fad214fc477644116497d27.png" alt="fuentes-de-grafiti" width="563" height="66" border="0" /></a></div>
+  </ul>
+  <ul>
+    <div id="apDiv28">Si deseas dejarnos algún comentario sobre nuestra página o si tiene alguna duda, llene los siguientes campos:</div>
+  </ul>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <div id="apDiv30">
+    <form id="form1" name="form1" method="post" action="mailto:patriciadamar14@gmail.com">
+      <table width="902" height="266" border="0">
+        <tr>
+          <td><label for="correo">Dirección de correo electrónico</label></td>
+          <td><input type="text" name="correo" id="correo" /></td>
+        </tr>
+        <tr>
+          <td><label for="nombre">Nombre y Apellido</label></td>
+          <td><input type="text" name="nombre" id="nombre" /></td>
+        </tr>
+        <tr>
+          <td><label for="comentario">Comentario, mensaje o pregunta</label></td>
+          <td><textarea name="comentario" cols="50" rows="7" id="comentario"></textarea></td>
+        </tr>
+        <tr>
+          <td><input type="submit" name="enviar" id="enviar" value="Enviar" /></td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <p>&nbsp;</p>
+  </div>
+  <div class="footer">
+    <p>&nbsp;</p>
+    <p><font color="red">UNIDAD EDUCATIVA MUNICIPAL TÉCNICA Y EN CIENCIAS </font><font color="red">&quot;SAN FRANCISCO DE QUITO&quot;</font></p>
+    <p><font color="red">ESPECIALIDAD INFORMÁTICA</font></p>
+    <div id="apDiv5"><img src="imagenes/sello-colegio.png" alt="" width="142" height="142" /></div>
+    <p><font color="blue">TERCERO DE BACHILLERATO &quot;D&quot;</font></p>
+    <p><font color ="blue"> ©2021 WILINTONG OÑA</font></p>
+    <p><font color ="blue">© 2021 DAMAR CHANGOLUISA</font>    </p>
+    <p>
+      <script type="text/javascript" src="https://counter6.stat.ovh/private/counter.js?c=fr237jhz9l69pwmlwbqmgkks23ktbrja&down=async" async></script>
+<noscript></noscript>
+</p></div>
+<!-- end .container --></div>
+<div id="apDiv3"><img src="imagenes/sello-colegio.png" width="147" height="148" /></div>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuPrincipal", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+</body>
+</html>
